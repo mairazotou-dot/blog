@@ -61,3 +61,27 @@ function openCity(evt, cityName) {
 }
 
 
+//countdown
+let interval;
+    const display = document.getElementById("display");
+
+    function start(minutes) {
+      clearInterval(interval);
+      let seconds = minutes * 60;
+      show(seconds);
+
+      interval = setInterval(() => {
+        seconds--;
+        show(seconds);
+        if (seconds <= 0) {
+          clearInterval(interval);
+          new Audio("alarm.mp3").play();
+        }
+      }, 1000);
+    }
+
+    function show(s) {
+      const m = String(Math.floor(s / 60)).padStart(2, "0");
+      const sec = String(s % 60).padStart(2, "0");
+      display.textContent = m + ":" + sec;
+    }
