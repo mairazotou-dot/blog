@@ -19,7 +19,7 @@ html,body{
 
 
 ::selection {
-  background: #f7dad9;
+  background: #f7dad9;  §
 }
 
 
@@ -31,9 +31,10 @@ html,body{
 h1{
     margin-left:2%;
     font-family: "times-new-roman", sans-serif;
-font-style: normal;
+font-style:normal; }
 
-}
+
+
 
 #sub{
     font-size: 30px;
